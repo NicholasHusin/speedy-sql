@@ -1,0 +1,4 @@
+collections:
+  problems:
+    output: true
+    permalink: /chapter/:path
