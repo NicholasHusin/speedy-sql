@@ -28,7 +28,7 @@ function setupLocalStorage() {
  * Saves current code with current location as a key.
  **/
 function saveLocalCode() {
-  let key = `${document.title}/status`;
+  let key = `${document.title}/code`;
   let value = codeMirror.getValue();
   window.localStorage.setItem(key, value);
 }
@@ -37,7 +37,7 @@ function saveLocalCode() {
  * Retrieves saved code with current location as a key.
  **/
 function restoreLocalCode() {
-  let key = `${document.title}/status`;
+  let key = `${document.title}/code`;
   return window.localStorage.getItem(key);
 }
 
