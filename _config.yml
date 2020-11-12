@@ -3,4 +3,4 @@ baseurl: /speedy_sql
 collections:
   problems:
     output: true
-    permalink: /chapter/:path
+    permalink: /problem/:path
