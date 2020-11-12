@@ -9,6 +9,7 @@ function setupCodeMirror() {
   let spot = document.getElementById("codemirror-spot");
 
   codeMirror = CodeMirror(spot, {
+    mode: 'text/x-sql',
     value: restoreLocalCode() || document.getElementById("starting-code").value,
     lineNumbers: true,
   });
