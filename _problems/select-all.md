@@ -1,6 +1,6 @@
 ---
 layout: problem
-title: Select All
+title: 1. Select All
 difficulty: Easy
 description: |
     A quick introduction to how SELECT * can be used to

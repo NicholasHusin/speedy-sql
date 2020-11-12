@@ -1,6 +1,6 @@
 ---
 layout: problem
-title: Select One
+title: 2. Select One
 difficulty: Easy
 description: |
     A quick introduction on how to project a particular attribute using the SELECT syntax.

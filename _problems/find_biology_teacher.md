@@ -1,6 +1,6 @@
 ---
 layout: problem
-title: Find Biology Teacher
+title: 3. Find Biology Teacher
 difficulty: Easy
 description: |
     A quick introduction on how to filter results using the WHERE clause.

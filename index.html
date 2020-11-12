@@ -8,7 +8,8 @@
   <div class="container">
     <div class="row d-flex justify-content-center">
 
-      {% for problem in site.problems %}
+      {% assign problems = site.problems | sort: "title" %}
+      {% for problem in problems %}
       <div class="col d-flex justify-content-center">
         <div class="card m-4 float-left" style="width: 18rem;">
           <div class="card-body">
