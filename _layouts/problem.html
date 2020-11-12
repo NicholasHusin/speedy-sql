@@ -1,0 +1,41 @@
+<input type="hidden" id="initial-query" value="{{ page.initial-query }}">
+<input type="hidden" id="solution" value="{{ page.solution }}">
+
+<html>
+  <title>{{ page.title }}</title>
+  {% include head.html %}
+  {% include nav.html %}
+
+  <div class="container">
+
+    <div class="card my-4">
+      <div class="card-header">
+        {{ page.title }}
+      </div>
+      <div class="card-body">
+        <pre class="card-text">{{ page.question }}</pre>
+      </div>
+    </div>
+
+    <div class="card mt-4 mb-2">
+      <div class="card-header">
+        Answer
+      </div>
+      <div id="codemirror-spot"></div>
+    </div>
+
+    <button type="button" class="btn btn-success mb-5" id="submit-button">Submit</button>
+
+    <div class="my-2" id="message"></div>
+
+    <h5 class="mt-4">Actual Output</h5>
+    <div id="actual-output"></div>
+
+    <h5 class="mt-4">Expected Output</h5>
+    <div id="expected-output"></div>
+  </div>
+</html>
+
+{% include foot.html %}
+<script src="/scripts/editor.js"></script>
+<script src="/scripts/sql.js"></script>
