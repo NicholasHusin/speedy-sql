@@ -13,7 +13,7 @@
       <div class="col d-flex justify-content-center">
         <div class="card m-4 float-left" style="width: 18rem;">
           <div class="card-body">
-            <h5 class="card-title">{{ problem.title }}</h5>
+            <h5 class="card-title problem-title">{{ problem.title }}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{ problem.difficulty }}</h6>
             <p class="card-text">{{ problem.description }}</p>
             <a class="card-link" href="{{ problem.url | relative_url }}">Solve</a>
@@ -28,3 +28,4 @@
 </html>
 
 {% include foot.html %}
+<script src="{{ site.baseurl }}/scripts/status.js"></script>
