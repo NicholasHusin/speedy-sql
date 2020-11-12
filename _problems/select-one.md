@@ -20,6 +20,9 @@ initial-query: |
                                 ('Neumann', 41, 'Mathematics'), 
                                 ('Karajan', 32, 'Music');
 
+starting-code: |
+    SELECT [YOUR CODE HERE] FROM [YOUR CODE HERE];
+
 solution: | 
     SELECT name FROM Teacher;
 ---

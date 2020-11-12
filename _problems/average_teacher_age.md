@@ -26,6 +26,10 @@ initial-query: |
                                 ('Neumann', 41, 'Mathematics'), 
                                 ('Karajan', 32, 'Music');
 
+starting-code: |
+    SELECT AVG(age)
+    FROM [YOUR CODE HERE];
+
 solution: | 
     SELECT AVG(age)
     FROM Teacher;

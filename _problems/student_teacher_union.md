@@ -30,6 +30,17 @@ initial-query: |
                                 ('Karajan', 32, 'Music'),
                                 ('Shostakovich', 36, 'Music');
 
+starting-code: |
+    SELECT [YOUR CODE HERE]
+    FROM   [YOUR CODE HERE]
+    WHERE  [YOUR CODE HERE]
+
+    UNION
+    
+    SELECT [YOUR CODE HERE]
+    FROM   [YOUR CODE HERE]
+    WHERE  [YOUR CODE HERE];
+
 solution: | 
     SELECT name, age
     FROM Student

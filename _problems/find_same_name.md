@@ -26,6 +26,11 @@ initial-query: |
                                 ('Neumann', 41, 'Mathematics'), 
                                 ('Karajan', 32, 'Music');
 
+starting-code: |
+    SELECT Student.name
+    FROM Student [YOUR CODE HERE] Teacher
+    WHERE [YOUR CODE HERE];
+
 solution: | 
     SELECT Student.name
     FROM Student JOIN Teacher

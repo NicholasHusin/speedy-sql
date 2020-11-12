@@ -23,6 +23,11 @@ initial-query: |
                                 ('Leeuwenhoek', 34, 'Biology'), 
                                 ('Karajan', 32, 'Music');
 
+starting-code: |
+    SELECT *
+    FROM Teacher
+    WHERE [YOUR CODE HERE];
+
 solution: | 
     SELECT *
     FROM Teacher

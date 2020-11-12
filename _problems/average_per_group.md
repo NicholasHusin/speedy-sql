@@ -28,6 +28,11 @@ initial-query: |
                                 ('Karajan', 32, 'Music'),
                                 ('Shostakovich', 36, 'Music');
 
+starting-code: |
+    SELECT department, AVG(age)
+    FROM Teacher
+    GROUP BY [YOUR CODE HERE];
+
 solution: | 
     SELECT department, AVG(age)
     FROM Teacher

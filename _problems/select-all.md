@@ -17,6 +17,9 @@ initial-query: |
     CREATE TABLE Teacher (name, age, department);
     INSERT INTO Student VALUES ('Bill', 20, 'Reading'), ('Joe', 18, 'Music'), ('Jessica', 19, 'Traveling');
 
+starting-code: |
+    SELECT * FROM [YOUR CODE HERE];
+
 solution: | 
     SELECT * FROM Student;
 ---
