@@ -4,7 +4,7 @@
 
 async function runSql(query) {
   config = {
-    locateFile: filename => `/lib/${filename}`
+    locateFile: filename => `/speedy_sql/lib/${filename}`
   }
 
   return await initSqlJs(config).then(function(SQL){

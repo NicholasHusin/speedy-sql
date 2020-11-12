@@ -1,3 +1,5 @@
+baseurl: /speedy_sql
+
 collections:
   problems:
     output: true
