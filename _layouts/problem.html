@@ -30,14 +30,21 @@
 
     <div class="my-2" id="message"></div>
 
-    <h5 class="mt-4">Actual Output</h5>
+    <h5 class="mt-4">Your Output</h5>
     <div id="actual-output"></div>
 
+    {% if page.mode != "Playground" %}
     <h5 class="mt-4">Expected Output</h5>
     <div id="expected-output"></div>
+    {% endif %}
   </div>
 </html>
 
 {% include foot.html %}
 <script src="{{ site.baseurl }}/scripts/editor.js"></script>
-<script src="{{ site.baseurl }}/scripts/sql.js"></script>
+
+{% if page.mode == "Playground" %}
+<script src="{{ site.baseurl }}/scripts/playground_sql.js"></script>
+{% else %}
+<script src="{{ site.baseurl }}/scripts/problem_sql.js"></script>
+{% endif %}

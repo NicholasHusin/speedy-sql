@@ -16,22 +16,21 @@ async function runSql(query) {
   }
 
   return await initSqlJs(config).then(function(SQL){
-    //Create the database
+    let table = "";
     var db = new SQL.Database();
 
     var initialQuery = document.getElementById('initial-query').value;
-
     db.run(initialQuery);
 
     try {
-      var stmt = db.prepare(query);
-      stmt.getAsObject({$start:1, $end:1}); // {col1:1, col2:111}
+      for (const stmt of db.iterateStatements(query)) {
+        table += generateTable(stmt);
+      }
 
-      // Bind new values
-      stmt.bind({$start:1, $end:2});
-
-      return generateTable(stmt);
+      db.close();
+      return table;
     } catch(err) {
+      db.close();
       return err;
     }
   });
