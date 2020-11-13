@@ -5,13 +5,13 @@
   {% include head.html %}
   {% include nav.html %}
 
-  <div class="container">
+  <div class="container my-4">
     <div class="row d-flex justify-content-center">
 
       {% assign problems = site.problems | sort: "title" %}
       {% for problem in problems %}
       <div class="col d-flex justify-content-center">
-        <div class="card m-4 float-left" style="width: 18rem;">
+        <div class="card my-3 float-left" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title problem-title">{{ problem.title }}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{ problem.difficulty }}</h6>
