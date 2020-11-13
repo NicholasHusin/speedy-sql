@@ -36,8 +36,9 @@ async function runSql(query) {
   });
 }
 
+
 function generateTable(stmt) {
-  let table = `<table class="table"><tbody>`;
+  let table = '';
   let addedHeader = false;
 
   while (stmt.step()) {
@@ -67,10 +68,14 @@ function generateTable(stmt) {
     table += `</tr>`;
   }
 
-  table += `</tbody></table>`;
+  if (table === '') {
+    return '';
+  }
 
-  return table;
+  return `<table class="table"><tbody>` + table + `</tbody></table><br>`;
 }
+
+
 
 function updateSolveStatus(newStatus) {
   let key = `${document.title}/status`;

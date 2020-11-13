@@ -8,7 +8,7 @@ config = {
 let db; 
 
 async function runSql(query) {
-  let table = "";
+  let table = '';
 
   try {
     for (const stmt of db.iterateStatements(query)) {
@@ -21,7 +21,7 @@ async function runSql(query) {
 }
 
 function generateTable(stmt) {
-  let table = `<table class="table"><tbody>`;
+  let table = '';
   let addedHeader = false;
 
   while (stmt.step()) {
@@ -51,9 +51,11 @@ function generateTable(stmt) {
     table += `</tr>`;
   }
 
-  table += `</tbody></table>`;
+  if (table === '') {
+    return '';
+  }
 
-  return table;
+  return `<table class="table"><tbody>` + table + `</tbody></table><br>`;
 }
 
 
