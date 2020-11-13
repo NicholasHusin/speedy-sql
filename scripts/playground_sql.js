@@ -22,9 +22,24 @@ async function runSql(query) {
 
 function generateTable(stmt) {
   let table = `<table class="table"><tbody>`;
+  let addedHeader = false;
 
   while (stmt.step()) {
     let row = stmt.getAsObject();
+
+    if (!addedHeader) {
+      table += `<tr>`;
+
+      for (let field of Object.keys(row)) {
+        table += `<td>`;
+        table += `<b>${field}</b>`;
+        table += `</td>`;
+      }
+
+      table += `</tr>`;
+      addedHeader = true;
+    }
+
     table += `<tr>`;
 
     for (let value of Object.values(row)) {
