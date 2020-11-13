@@ -10,7 +10,7 @@ question: |
         - Teacher (name, age, department)
 
     Coincidentally, all the "Mathematics" teachers are retiring this year.
-    As such, you need to delete all the teachers belonging to "Mathetmatics" department.
+    As such, you need to delete all the teachers belonging to "Mathematics" department.
 
     After deleting, query all the data from the Teacher table to verify that your deletion works.
 
