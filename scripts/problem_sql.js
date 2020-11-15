@@ -10,6 +10,15 @@ const WRONG_ICON = `<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi 
 const CORRECT_MESSAGE = `Your answer is correct!`;
 const WRONG_MESSAGE = ` Your output is different from what is expected.`;
 
+
+/**
+ * Runs a given query and returns an output.
+ * Output is given as an HTML table element to be rendered.
+ * Returns a string of error when error is encountered.
+ *
+ * Each execution of the function instantiates a new database instance
+ * such that unwanted state changes does not persist.
+ **/
 async function runSql(query) {
   config = {
     locateFile: filename => `{{ site.baseurl }}/lib/${filename}`
@@ -37,6 +46,9 @@ async function runSql(query) {
 }
 
 
+/**
+ * Generates an HTML table element based on the query result.
+ **/
 function generateTable(stmt) {
   let table = '';
   let addedHeader = false;
@@ -76,7 +88,9 @@ function generateTable(stmt) {
 }
 
 
-
+/**
+ * Updates solve status to be displayed on home page.
+ **/
 function updateSolveStatus(newStatus) {
   let key = `${document.title}/status`;
   window.localStorage.setItem(key, newStatus);

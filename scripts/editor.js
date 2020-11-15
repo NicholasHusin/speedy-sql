@@ -2,15 +2,18 @@ var codeMirror;
 
 window.addEventListener('load', function() {
   setupCodeMirror();
-  setupLocalStorage();
+  setupResetButton();
 });
 
+/**
+ * Instantiates code mirror instance.
+ **/
 function setupCodeMirror() {
-  let spot = document.getElementById("codemirror-spot");
+  let spot = document.getElementById('codemirror-spot');
 
   codeMirror = CodeMirror(spot, {
     mode: 'text/x-sql',
-    value: restoreLocalCode() || document.getElementById("starting-code").value,
+    value: restoreLocalCode() || document.getElementById('starting-code').value,
     lineNumbers: true,
   });
 
@@ -19,8 +22,11 @@ function setupCodeMirror() {
   });
 }
 
-function setupLocalStorage() {
-  let resetButton = document.getElementById("reset-button");
+/**
+ * Setup button to reset saved code on editor.
+ **/
+function setupResetButton() {
+  let resetButton = document.getElementById('reset-button');
   resetButton.addEventListener('click', resetLocalCode);
 }
 
@@ -44,10 +50,10 @@ function restoreLocalCode() {
 
 /**
  * Reset initial code of codemirror.
- * Session storage does not need to be handled here as codemirror
+ * Local storage does not need to be handled here as codemirror
  * value change will trigger the local storage update.
  **/
 function resetLocalCode() {
-  let initialCode = document.getElementById("starting-code").value;
+  let initialCode = document.getElementById('starting-code').value;
   codeMirror.setValue(initialCode);
 }

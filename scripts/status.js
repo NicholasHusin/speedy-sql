@@ -1,3 +1,6 @@
+/**
+ * Display checkmark next to problem title for solved problems.
+ **/
 window.addEventListener('load', function() {
   let titles = document.getElementsByClassName('problem-title');
 
