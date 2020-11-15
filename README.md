@@ -1,4 +1,4 @@
-# Speedy SQL
+# Speedy SQL ([Live Demo](https://nick.husin.me/speedy-sql))
 
 Speedy SQL is a SQL learning platform that runs entirely on the browser. 
 The project is designed to be deployed using GitHub pages, 
