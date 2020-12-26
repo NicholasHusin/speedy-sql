@@ -1,82 +1,79 @@
 ---
+layout: default
+title: FAQ
 ---
 
-<html>
-  <title>FAQ</title>
-  {% include head.html %}
-  {% include nav.html %}
 
-  <div class="container my-4">
 
-    <div class="card my-4">
-      <div class="card-body">
-        <h5 class="card-title">What is Speedy SQL all about?</h5>
-        <p class="card-text">
-        Speedy SQL is an easily deployable platform for teaching SQL.
-        It runs entirely on your browser and is built with Jekyll, meaning that anyone could easily deploy their own version of Speedy SQL.
-        All they need to do is fork the repository, deploy it on GitHub pages, and write a few Markdown files to deploy their own set of questions!
-        </p>
-      </div>
+<div class="container my-4">
+
+  <div class="card my-4">
+    <div class="card-body">
+      <h5 class="card-title">What is Speedy SQL all about?</h5>
+      <p class="card-text">
+      Speedy SQL is an easily deployable platform for teaching SQL.
+      It runs entirely on your browser and is built with Jekyll, meaning that anyone could easily deploy their own version of Speedy SQL.
+      All they need to do is fork the repository, deploy it on GitHub pages, and write a few Markdown files to deploy their own set of questions!
+      </p>
     </div>
-
-    <div class="card my-4">
-      <div class="card-body">
-        <h5 class="card-title">Wait, this all runs on my browser?</h5>
-        <p class="card-text">
-        Yep! Speedy SQL is actually running a WebAssembly port of SQLite called <a href="https://github.com/sql-js/sql.js/">sql.js</a>.
-        I came across sql.js while I was trying to port a C++ compiler for a similar project to Speedy SQL using <a href="https://emscripten.org/">Emscripten</a>.
-        Since I was taking a database course at that time, I decided to just go ahead and make Speedy SQL first while my memory of the course is still fresh ¯\_(ツ)_/¯.
-        </p>
-
-        <p class="card-text">
-        As for how Speedy SQL saves your queries and keeps track of the questions you've solved, everything is stored in your browser's local storage.
-        </p>
-      </div>
-    </div>
-
-    <div class="card my-4">
-      <div class="card-body">
-        <h5 class="card-title">What about client side validation then? How do we prevent cheating?</h5>
-        <p class="card-text">
-        Well, to prevent cheating, we kind of have to deploy the standard architecture: a platform where answers are validated inside a Docker container on the server side.
-        If you're someone who can do that though, you're not the target audience of this project.
-        </p>
-        <p class="card-text">
-        This project is meant for educators that cannot afford to spin up their own grading infrastructure due to various constraints.
-        Consider high schools and universities across the world that cannot afford the required infrastructure or manpower to deploy their own custom platform.
-        Projects such as this, with low barrier to entry (this could technically be deployed as a set of HTML and JavaScript files without requiring internet connection),
-        might be the best choice in those cases.
-        </p>
-        <p class="card-text">
-        Alternatively, this could be used as a public learning platform, like websites such as <a href="https://codingbat.com">CodingBat</a>.
-        In this case, there really is no reason to care about client side validation.
-        </p>
-      </div>
-    </div>
-
-    <div class="card my-4">
-      <div class="card-body">
-        <h5 class="card-title">I already have a SQL grading system set up. Is this project completely irrelevant to me then?</h5>
-        <p class="card-text">
-        Maybe. Maybe not.
-        </p>
-        <p class="card-text">
-        If you're using Docker container or similar solutions to isolate instances of student answers (<a href="https://xkcd.com/327/">relevant XKCD</a>), 
-        you might be able to learn something from this project.
-        In my university, and most likely many other universities, gradings are done in container that takes a while to start. 
-        So, one answer submission would take a few seconds to finish.
-        </p>
-        <p class="card-text">
-        But, as you can test yourself in this website, without the overhead of starting a container, a submission can be evaluated almost instantaneously.
-        You could potentially improve your grading system by opting to spawn a new instance of something similar to sql.js in memory for each student submission.
-        This would significantly improve the evaluation speed while still providing the required isolation.
-        </p>
-        <p class="card-text">
-        Alternatively, you could always deploy something similar to Speedy SQL as a playground. 
-        Personally, as a student, I always appreciate it when I'm given a playground where I could rapidly test my queries (it blows to wait for a few seconds only to be told that I made a typo).
-      </div>
-    </div>
-
   </div>
-</html>
-{% include foot.html %}
+
+  <div class="card my-4">
+    <div class="card-body">
+      <h5 class="card-title">Wait, this all runs on my browser?</h5>
+      <p class="card-text">
+      Yep! Speedy SQL is actually running a WebAssembly port of SQLite called <a href="https://github.com/sql-js/sql.js/">sql.js</a>.
+      I came across sql.js while I was trying to port a C++ compiler for a similar project to Speedy SQL using <a href="https://emscripten.org/">Emscripten</a>.
+      Since I was taking a database course at that time, I decided to just go ahead and make Speedy SQL first while my memory of the course is still fresh ¯\_(ツ)_/¯.
+      </p>
+
+      <p class="card-text">
+      As for how Speedy SQL saves your queries and keeps track of the questions you've solved, everything is stored in your browser's local storage.
+      </p>
+    </div>
+  </div>
+
+  <div class="card my-4">
+    <div class="card-body">
+      <h5 class="card-title">What about client side validation then? How do we prevent cheating?</h5>
+      <p class="card-text">
+      Well, to prevent cheating, we kind of have to deploy the standard architecture: a platform where answers are validated inside a Docker container on the server side.
+      If you're someone who can do that though, you're not the target audience of this project.
+      </p>
+      <p class="card-text">
+      This project is meant for educators that cannot afford to spin up their own grading infrastructure due to various constraints.
+      Consider high schools and universities across the world that cannot afford the required infrastructure or manpower to deploy their own custom platform.
+      Projects such as this, with low barrier to entry (this could technically be deployed as a set of HTML and JavaScript files without requiring internet connection),
+      might be the best choice in those cases.
+      </p>
+      <p class="card-text">
+      Alternatively, this could be used as a public learning platform, like websites such as <a href="https://codingbat.com">CodingBat</a>.
+      In this case, there really is no reason to care about client side validation.
+      </p>
+    </div>
+  </div>
+
+  <div class="card my-4">
+    <div class="card-body">
+      <h5 class="card-title">I already have a SQL grading system set up. Is this project completely irrelevant to me then?</h5>
+      <p class="card-text">
+      Maybe. Maybe not.
+      </p>
+      <p class="card-text">
+      If you're using Docker container or similar solutions to isolate instances of student answers (<a href="https://xkcd.com/327/">relevant XKCD</a>), 
+      you might be able to learn something from this project.
+      In my university, and most likely many other universities, gradings are done in container that takes a while to start. 
+      So, one answer submission would take a few seconds to finish.
+      </p>
+      <p class="card-text">
+      But, as you can test yourself in this website, without the overhead of starting a container, a submission can be evaluated almost instantaneously.
+      You could potentially improve your grading system by opting to spawn a new instance of something similar to sql.js in memory for each student submission.
+      This would significantly improve the evaluation speed while still providing the required isolation.
+      </p>
+      <p class="card-text">
+      Alternatively, you could always deploy something similar to Speedy SQL as a playground. 
+      Personally, as a student, I always appreciate it when I'm given a playground where I could rapidly test my queries (it blows to wait for a few seconds only to be told that I made a typo).
+    </div>
+  </div>
+
+</div>

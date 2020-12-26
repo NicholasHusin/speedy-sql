@@ -1,46 +1,43 @@
+---
+layout: default
+---
+
 <input type="hidden" id="initial-query" value="{{ page.initial-query }}">
 <input type="hidden" id="starting-code" value="{{ page.starting-code }}">
 <input type="hidden" id="solution" value="{{ page.solution }}">
 
-<html>
-  <title>{{ page.title }}</title>
-  {% include head.html %}
-  {% include nav.html %}
+<div class="container">
 
-  <div class="container">
-
-    <div class="card my-4">
-      <div class="card-header">
-        {{ page.title }}
-      </div>
-      <div class="card-body">
-        <pre class="card-text">{{ page.question }}</pre>
-      </div>
+  <div class="card my-4">
+    <div class="card-header">
+      {{ page.title }}
     </div>
-
-    <div class="card mt-4 mb-2">
-      <div class="card-header">
-        Your Query
-      </div>
-      <div id="codemirror-spot"></div>
+    <div class="card-body">
+      <pre class="card-text">{{ page.question }}</pre>
     </div>
-
-    <button type="button" class="btn btn-success mb-5" id="submit-button">Submit</button>
-    <button type="button" class="btn btn-info mb-5" id="reset-button">Reset</button>
-
-    <div class="my-2" id="message"></div>
-
-    <h5 class="mt-4">Your Output</h5>
-    <div id="actual-output"></div>
-
-    {% if page.mode != "Playground" %}
-    <h5 class="mt-4">Expected Output</h5>
-    <div id="expected-output"></div>
-    {% endif %}
   </div>
-</html>
 
-{% include foot.html %}
+  <div class="card mt-4 mb-2">
+    <div class="card-header">
+      Your Query
+    </div>
+    <div id="codemirror-spot"></div>
+  </div>
+
+  <button type="button" class="btn btn-success mb-5" id="submit-button">Submit</button>
+  <button type="button" class="btn btn-info mb-5" id="reset-button">Reset</button>
+
+  <div class="my-2" id="message"></div>
+
+  <h5 class="mt-4">Your Output</h5>
+  <div id="actual-output"></div>
+
+  {% if page.mode != "Playground" %}
+  <h5 class="mt-4">Expected Output</h5>
+  <div id="expected-output"></div>
+  {% endif %}
+</div>
+
 <script src="{{ site.baseurl }}/scripts/editor.js"></script>
 
 {% if page.mode == "Playground" %}
