@@ -1,6 +1,28 @@
-baseurl: /speedy-sql
+baseurl:
 
 collections:
   problems:
     output: true
     permalink: /problem/:path
+
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+sass:
+  style: compressed
+
+permalink: pretty
+exclude: [vendor]
+plugins:
+    - jekyll-sitemap
+    - jekyll-minifier
+
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
+
